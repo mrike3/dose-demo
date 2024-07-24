@@ -2,6 +2,7 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  base:'/dose-demo/',
   head: [["link", { rel: "icon", href: "/svg/logo.svg" }]],
   title: "北笙",
   description: "make myself VitePress Web",
