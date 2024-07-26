@@ -1,1 +1,0 @@
-import{_ as a,c as e,o as s,a5 as i}from"./chunks/framework.CxC7zvk1.js";const b=JSON.parse('{"title":"Java基础","description":"","frontmatter":{},"headers":[],"relativePath":"Java基础.md","filePath":"Java基础.md"}'),t={name:"Java基础.md"},n=i("",18),l=[n];function h(o,d,r,p,c,u){return s(),e("div",null,l)}const m=a(t,[["render",h]]);export{b as __pageData,m as default};
