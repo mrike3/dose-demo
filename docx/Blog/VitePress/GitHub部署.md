@@ -74,7 +74,13 @@ git push -f origin master:master
 ````
 git config --global http.sslVerify true
 ````
+11. 选择github actions  
+![An image](/VitePress/8.png)
+12. 设置工作流
+![An image](/VitePress/9.png)
+13. 重命名并设置deploy脚本  
 
+需要将代码中高亮部分进行更改，更改成你仓库中<code>.vitepress/dist</code>这个目录的路径
 ````
 # 构建 VitePress 站点并将其部署到 GitHub Pages 的示例工作流程
 #
@@ -84,7 +90,7 @@ on:
   # 在针对 `main` 分支的推送上运行。如果你
   # 使用 `master` 分支作为默认分支，请将其更改为 `master`
   push:
-    branches: [main]
+    branches: [master]
 
   # 允许你从 Actions 选项卡手动运行此工作流程
   workflow_dispatch:
@@ -141,3 +147,4 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
 ````
+![An image](/VitePress/10.png)
