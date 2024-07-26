@@ -2,6 +2,9 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  markdown:{
+    lineNumbers:true
+  },
   base:'/dose-demo/',
   head: [["link", { rel: "icon", href: "/dose-demo/svg/logo.svg" }]],
   title: '枫笙',
