@@ -1,12 +1,5 @@
 # GitHub部署
-首先在项目根目录执行构建命令，构建完成后在<code>.vitepress</code>目录下有一个<code>dist</code>包生成
-````
-npm run docs:build
-````
-构建完后可以执行以下命令进行查看
-````
-npm run docs:preview
-````
+
 1. 没有GitHub的注册一个账户，在GitHub上新建一个自己的仓库，起一个仓库名称，直接创建
 ![An image](/VitePress/6.png)  
 2. 在项目中的<code>.vitepress/config.mjs</code>中配置<code>base</code>
@@ -16,6 +9,9 @@ export default defineConfig({
 })
 ````
 3. 在项目根目录打开终端输入以下命令初始化git仓库
+::: warning
+需首先安装<a href="https://git-scm.com/downloads">git</a>，并配置环境变量。
+:::
 ````
 git init
 ````
@@ -30,6 +26,10 @@ git config --global user.email "your email"
 ````
 git add .
 ````
+::: warning
+清除git暂存区  
+git reset
+:::
 6. 创建第一次提交
 ````
 git commit -m "first commit"
@@ -80,7 +80,7 @@ git config --global http.sslVerify true
 ![An image](/VitePress/9.png)
 13. 重命名并设置deploy脚本  
 
-需要将代码中高亮部分进行更改，更改成你仓库中<code>.vitepress/dist</code>这个目录的路径
+需要将代码中高亮部分进行更改，<code>branches</code>更改为你仓库中的分支名称，<code>path</code>更改成你仓库中<code>.vitepress/dist</code>这个目录的路径
 ````
 # 构建 VitePress 站点并将其部署到 GitHub Pages 的示例工作流程
 #
@@ -90,7 +90,7 @@ on:
   # 在针对 `main` 分支的推送上运行。如果你
   # 使用 `master` 分支作为默认分支，请将其更改为 `master`
   push:
-    branches: [master]
+    branches: [master]  // [!code --]
 
   # 允许你从 Actions 选项卡手动运行此工作流程
   workflow_dispatch:
@@ -132,7 +132,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .vitepress/dist // [!code focus]
+          path: .vitepress/dist // [!code ++]
 
   # 部署工作
   deploy:
@@ -148,3 +148,7 @@ jobs:
         uses: actions/deploy-pages@v4
 ````
 ![An image](/VitePress/10.png)
+14. 运行脚本
+![An image](/VitePress/11.png)
+15. 查看网站地址
+![An image](/VitePress/12.png)
