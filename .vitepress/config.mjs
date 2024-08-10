@@ -40,6 +40,7 @@ export default defineConfig({
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Examples', link: '/docx/init/markdown-examples' },
+      { text: 'Git命令', link: '/docx/Git/Git命令' },
       { text: 'Java',link:'/docx/Java/Java教程'},
       { text: '个人博客搭建',
         items:[
@@ -51,6 +52,7 @@ export default defineConfig({
     outlineTitle:'文章目录',
     outline:[2,6],
     sidebar:{
+
       '/docx/Java':[
         {
           text: 'Java基础',
@@ -88,7 +90,7 @@ export default defineConfig({
             { text: '项目创建', link: '/docx/Blog/VitePress/项目创建' },
             { text: '主页面配置', link: '/docx/Blog/VitePress/自定义配置' },
             { text: '目录侧边栏', link: '/docx/Blog/VitePress/文章侧边栏' },
-            { text: 'GitHub部署', link: '/docx/Blog/VitePress/GitHub部署' }
+            { text: 'GitHub部署', link: '/docx/Blog/VitePress/GitHub部署' },
           ]
         }
       ]
