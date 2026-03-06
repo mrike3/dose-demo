@@ -89,3 +89,15 @@ git reset --hard origin/
 ```shell
 git reset --hard 推送成功的哈希值
 ```
+
+## 删除git上的文件
+```shell
+# 删除git上的文件
+git rm -r --cached 文件路径/
+# 提交更改
+git add .
+# 提交删除文件的更改
+git commit -m "删除文件"
+# 推送到远程仓库
+git push -u origin master
+```
