@@ -16,6 +16,10 @@ git add .
 ```shell
 git reset
 ```
+## 创建新分支并切换
+```shell
+git switch -c <分支名称>
+```
 ## 显示当前分支
 ```shell
 git branch
@@ -75,4 +79,13 @@ git push -f origin master:master
 ## 关闭 Git 对 HTTP/HTTPS 连接的 SSL 验证
 ```shell
 git config --global http.sslVerify false
+```
+
+## 强制拉取合并代码（origin/分支名称）
+```shell
+git reset --hard origin/
+```
+## 本地恢复至其中一次推送的样子
+```shell
+git reset --hard 推送成功的哈希值
 ```

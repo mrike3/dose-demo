@@ -11,7 +11,7 @@ export default defineConfig({
   description: "make myself VitePress Web",
   themeConfig: {
     editLink:{
-      pattern:'/:path',
+      pattern:'https://github.com/mrike3/dose-demo/edit/master/:path',
       text:'编辑'
     },
     search: {
