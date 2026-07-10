@@ -42,6 +42,7 @@ export default defineConfig({
       { text: 'Examples', link: '/docx/init/markdown-examples' },
       { text: 'Git命令', link: '/docx/Git/Git命令' },
       { text: 'Java',link:'/docx/Java/Java教程'},
+      { text: 'Gradle',link:'/docx/Gradle/gradle'},
       { text: '个人博客搭建',
         items:[
           {text:'VuePress',link:'https://vuepress.vuejs.org/zh/guide/introduction.html'},
@@ -58,7 +59,8 @@ export default defineConfig({
           text: 'Java基础',
           items: [
             { text: 'Java教程', link: '/docx/Java/Java教程' },
-            { text: 'Java简介', link: '/docx/Java/Java简介' }
+            { text: 'Java简介', link: '/docx/Java/Java简介' },
+            { text: 'Java基础', link: '/docx/Java/Java基础' }
           ]
         },
         {
